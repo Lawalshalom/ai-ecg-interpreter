@@ -54,7 +54,7 @@ TARGET_SAMPLES = 2500   # 10 s × 250 Hz
 SAMPLES_PER_LEAD = 625  # 2.5 s × 250 Hz (per lead in 3×4 layout)
 
 
-class ECGDigitizer:
+class ECGDigitizerPipeline:
     """
     End-to-end ECG image digitizer.
 

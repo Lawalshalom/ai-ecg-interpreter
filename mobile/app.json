@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "ECG Interpreter",
+    "slug": "ecg-interpreter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a237e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.echonext.ecginterpreter",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera access is needed to photograph ECG printouts for analysis.",
+        "NSPhotoLibraryUsageDescription": "Photo library access is needed to upload ECG images for analysis.",
+        "NSPhotoLibraryAddUsageDescription": "Photo library access is needed to save ECG analysis results."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a237e"
+      },
+      "package": "com.echonext.ecginterpreter",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow ECG Interpreter to access your photos to upload ECG images.",
+          "cameraPermission": "Allow ECG Interpreter to use the camera to photograph ECG printouts."
+        }
+      ]
+    ],
+    "scheme": "ecg-interpreter",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
